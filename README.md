@@ -3,9 +3,9 @@
 # js_testing
 Testing Front End Javascript with Karma, Jasmine, and Travis CLI
 
-##This repo serves as an example to guide you in testing your front end javascript.
+## Example test repo for javascript front-end development.
 
-##Dependencies
+## Dependencies
 - Node
 - Karma
 - Jasmine
