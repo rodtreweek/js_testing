@@ -1,10 +1,10 @@
 {
-  "name": "FEJStesting",
+  "name": "js_testing",
   "version": "0.0.1",
   "description": "a sample testing setup",
   "repository": {
     "type": "git",
-    "url": "https://github.com/tevko/FEJStesting.git"
+    "url": "git+https://github.com/rodtreweek/js_testing.git"
   },
   "keywords": [
     "testing",
@@ -13,16 +13,24 @@
     "travis",
     "node"
   ],
-  "author": "@tevko",
+  "author": "@rodtreweek",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/tevko/FEJStesting/issues"
+    "url": "https://github.com/rodtreweek/js_testing/issues"
   },
-  "homepage": "https://github.com/tevko/FEJStesting",
+  "homepage": "https://github.com/rodtreweek/js_testing",
   "devDependencies": {
     "jasmine-core": "^2.3.2",
-    "karma": "^0.12.31",
-    "karma-firefox-launcher": "^0.1.4",
-    "karma-jasmine": "^0.3.5"
+    "karma": "^0.12.37",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-firefox-launcher": "^0.1.7",
+    "karma-jasmine": "^0.3.8"
+  },
+  "main": "my.conf.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
