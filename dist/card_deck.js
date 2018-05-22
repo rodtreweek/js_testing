@@ -1,4 +1,4 @@
-/** More simple, with suits ordered alphabetically (which is apparently the way it's done in Bridge):
+/* Suits ordered alphabetically (which is apparently the way it's done in Bridge)*/
 var deck = new Array();
 var suits = ["clubs", "diamonds", "hearts", "spades"];
 var values = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
