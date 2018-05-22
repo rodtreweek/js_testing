@@ -102,10 +102,6 @@ if (Array.indexOf === undefined) {
         this.init();
     }
 
-    /*
-     * requires jquery (currently)
-     * TODO: put this in a UI extension pack along with all the other demo methods
-     */
     playingCards.prototype.spread = function(dest) {
         if (!this.conf.el && !dest) {
             return false;
@@ -124,13 +120,11 @@ if (Array.indexOf === undefined) {
      */
     playingCards.defaults = {
         "decks": 1,
-        // TODO: enable 'font' option -- loading cards.ttf
         "renderMode": 'css',
-        // For a coustom " of "-String
         "ofString": " of ",
         "startShuffled": true,
-        "jokers": 2,
-        "jokerText": "Joker",
+        //"jokers": 2,
+        //"jokerText": "Joker",
         "ranks": {
             "2": "Two",
             "3": "Three",
@@ -147,10 +141,10 @@ if (Array.indexOf === undefined) {
             "A": "Ace"
         },
         "suits": {
-            "S": "Spades",
             "D": "Diamonds",
             "C": "Clubs",
-            "H": "Hearts"
+            "H": "Hearts",
+            "S": "Spades"
         }
     };
 
