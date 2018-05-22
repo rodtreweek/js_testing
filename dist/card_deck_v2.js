@@ -4,7 +4,7 @@
 // Copyright 2001 by Mike Hall.
 // See http://www.brainjar.com for terms of use.                                                                        *
 //*****************************************************************************
-// Used by permission and Licensed under GPLv3: https://www.gnu.org/licenses/gpl.html
+// Used by permission for non-commercial purposes only and Licensed under GPLv3: https://www.gnu.org/licenses/gpl.html
 //=============================================================================
 // Card Object
 //
