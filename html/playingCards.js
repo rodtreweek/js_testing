@@ -1,5 +1,4 @@
 if (Array.indexOf === undefined) {
-    // doens't exist in oldIE
     /* Finds the index of the first occurence of item in the array, or -1 if not found */
     Array.prototype.indexOf = function(v) {
         for (var i = 0; i < this.length; ++i) {
@@ -57,14 +56,6 @@ if (Array.indexOf === undefined) {
             //}
         }
     };
-    // TODO: create more methods:
-    // playingCards.prototype.order (set to out-of-box ordering)
-    // -- do we want other special formations (like trick deck ordering systems that deal perfect hands)?
-    // -- probably going to leave this as an extension option
-    /**
-     * draw a card
-     * @return mixed (object|null) A card object (if a card is available)
-     */
     playingCards.prototype.draw = function() {
         return this.cards.length > 0 ? this.cards.pop() : null;
     };
