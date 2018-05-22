@@ -25,12 +25,8 @@
      * generate (and cache) html for the card
      * 
      * @return string The HTML block to show the card
-     *
-     * Note the character strings "\u00a0," "\u2663," "\u2666," "\u2665," and "\u2660." 
-     * These are Unicode escape sequences for the characters corresponding to the HTML character entities 
-     * &nbsp;, &clubs;, &diams;, &hearts; and &spades; respectively.
      */
-
+    
 Prev | Next
     playingCards.card.prototype.getHTML = function() {
         if (this.html) {
