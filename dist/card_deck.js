@@ -71,6 +71,57 @@ function renderDeck()
 	}
 }
 
+//switch jokers on or off
+var jokerOrNot=true;
+
+//set working global variables
+var cardsDealt=[];
+var cardsInPack = jokerOrNot? 54:52;
+//function to iterate through array and check for double values
+var checkArray = function (dealArray, card){
+    var i = 0;
+    var x;
+    while (i<=dealArray.length && !x) {
+      x = dealArray[i]===card ? true:false;
+    i++;
+    }  
+    return x;
+};
+//function to name each card from it's corresponding numeric value
+var nameCard = function(named){
+    var suit= named<=12? "Hearts":named<=25?"Clubs":named<=38?"Diamonds":named<=51?"Spades":"";
+    var value= named%13===0? "Ace":named%13===10?"Jack":named%13===11?"Queen":named%13===12?"King":named%13+1;
+    var card = value+" of "+suit;
+    if (named==52||named==53){
+        return "Joker!";
+    } else {
+        return card;
+    }
+};
+//function to deal a random card from pack without duplicate dealing
+var dealCard = function (){
+    var pick;
+    while (checkArray(cardsDealt, pick) && cardsDealt.length<=cardsInPack-1) {
+        pick=Math.floor(Math.random()*cardsInPack);
+    } 
+    if(cardsDealt.length<(cardsInPack)){
+        cardsDealt.push(pick);
+    } else {
+        return "End of Pack Reached!";
+    }
+    return(pick);
+};
+
+//Deal whole deck
+var h =0;
+var j = 0;
+while (h<80){ dealCard(); h++;}
+//Uncomment line immediately below to sort the deck in numerical order
+//cardsDealt.sort(function(a,b){return a - b});
+//print deck to console
+while (j<cardsDealt.length){
+console.log(nameCard(cardsDealt[j])); j++;}
+
 function orderRank(a, b)
 {
   var intRegex = /^\d+$/;
