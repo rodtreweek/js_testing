@@ -36,22 +36,23 @@ Prev | Next
         if (this.html) {
             return this.html;
         }
-        this.suitCode = "\u00a0";
+        
+        this.suitCode = "&nbsp;";
         this.colorCls = '';
         switch (this.suit) {
         case "S":
-            this.suitCode = "\u2660";
+            this.suitCode = "&spades;";
             break;
         case "D":
             this.colorCls = "red";
-            this.suitCode = "\u2666";
+            this.suitCode = "&diams;";
             break;
         case "C":
-            this.suitCode = "\u2663";
+            this.suitCode = "&clubs;";
             break;
         case "H":
             this.colorCls = "red";
-            this.suitCode = "\u2665";
+            this.suitCode = "&hearts;";
             break;
         }
 
