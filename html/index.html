@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--************************************************************************-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Deck of Cards</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link href="/common/default.css" rel="stylesheet" type="text/css" />
+<link href="cards.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+
+.cardArea {
+  font-size: 20pt;
+  float: left;
+  margin-right: 1em;
+  position: relative;
+  width:  4.50em;
+  height: 5.00em;
+}
+
+</style>
+<script type="text/javascript" src="cards.js"></script>
+<script type="text/javascript">//<![CDATA[
+
+var deck, hand, discards;
+
+window.onload = init;
+
+function init() {
+
+  deck     = new Stack();
+  hand     = new Stack();
+  discards = new Stack();
+
+  deck.makeDeck(1);
+  display();
+}
+
+function shuffle() {
+
+  if (deck == null) return;
+
+  deck.shuffle(1);
+  display();
+}
+
+function deal() {
+
+  var i;
+
+  if (deck == null) return;
+
+  if (deck.cardCount() < 7)
+    alert("Not enough cards.");
+  else {
+    discard();
+    for (i = 0; i < 7; i++)
+      hand.addCard(deck.deal());
+  }
+
+  display();
+}
+
+function discard() {
+
+  if (deck == null) return;
+
+  discards.combine(hand);
+  display();
+}
+
+function reset() {
+
+  var el;
+
+  if (deck == null) return;
+
+  discards.combine(hand);
+  deck.combine(discards);
+  display();
+}
+
+function display() {
+
+  var el, top, left;
+  var n;
+
+  // Note: only a fraction of the cards in the deck and discard pile are
+  // displayed, just enough to get an idea of the number of cards in each.
+
+  left = 0;
+  top  = 0;
+  el = document.getElementById("deck");
+  while (el.firstChild != null)
+    el.removeChild(el.firstChild);
+  n = deck.cardCount();
+  for (i = 0; i < Math.round(n / 5); i++) {
+    node = deck.cards[i].createNode();
+    node.firstChild.style.visibility = "hidden";
+    node.style.left = left + "em";
+    node.style.top  = top  + "em";
+    el.appendChild(node);
+    left += 0.10;
+    top  += 0.05;
+  }
+
+  left = 0;
+  top  = 0;
+  el = document.getElementById("hand");
+  while (el.firstChild != null)
+    el.removeChild(el.firstChild);
+  for (i = 0; i < hand.cardCount(); i++) {
+    node = hand.cards[i].createNode();
+    node.style.left = left + "em";
+    node.style.top  = top  + "em";
+    el.appendChild(node);
+    left += 1.00;
+    top  += 0.25;
+  }
+
+  left = 0;
+  top  = 0;
+  el = document.getElementById("discards");
+  while (el.firstChild != null)
+    el.removeChild(el.firstChild);
+  n = discards.cardCount();
+  for (i = n - Math.round(n / 5); i < n; i++) {
+    node = discards.cards[i].createNode();
+    node.style.left = left + "em";
+    node.style.top  = top  + "em";
+    el.appendChild(node);
+    left += 0.10;
+    top  += 0.05;
+  }
+}
+
+//]]></script>
+</head>
+<body>
+
+<div id="demoBox">
+
+<h3>Card Display Demo</h3>
+
+<p>This page shows how cards can be displayed using some DHTML. Again, use
+the links below to shuffle the deck, deal a hand or return used cards to the
+deck.</p>
+
+<p>
+<a href="" onclick="shuffle();return false;">Shuffle Deck</a>
+|
+<a href="" onclick="deal();return false;">Deal</a>
+|
+<a href="" onclick="discard();return false;">Discard</a>
+|
+<a href="" onclick="reset();return false;">Reset Deck</a>
+</p>
+
+<p>Use your browser's <code>View Source</code> option to see the full source
+code.</p>
+
+</div>
+
+<p></p>
+
+<div id="deck"     class="cardArea"></div>
+<div id="hand"     class="cardArea" style="width:10em;"></div>
+<div id="discards" class="cardArea"></div>
+
+</body>
+</html>
+
