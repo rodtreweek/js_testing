@@ -25,27 +25,33 @@
      * generate (and cache) html for the card
      * 
      * @return string The HTML block to show the card
+     *
+     * Note the character strings "\u00a0," "\u2663," "\u2666," "\u2665," and "\u2660." 
+     * These are Unicode escape sequences for the characters corresponding to the HTML character entities 
+     * &nbsp;, &clubs;, &diams;, &hearts; and &spades; respectively.
      */
+
+Prev | Next
     playingCards.card.prototype.getHTML = function() {
         if (this.html) {
             return this.html;
         }
-        this.suitCode = "&nbsp;";
+        this.suitCode = "\u00a0";
         this.colorCls = '';
         switch (this.suit) {
         case "S":
-            this.suitCode = "&spades;";
+            this.suitCode = "\u2660";
             break;
         case "D":
             this.colorCls = "red";
-            this.suitCode = "&diams;";
+            this.suitCode = "\u2666";
             break;
         case "C":
-            this.suitCode = "&clubs;";
+            this.suitCode = "\u2663";
             break;
         case "H":
             this.colorCls = "red";
-            this.suitCode = "&hearts;";
+            this.suitCode = "\u2665";
             break;
         }
 
