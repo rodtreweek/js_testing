@@ -1,10 +1,9 @@
 ![Build Status](https://travis-ci.org/rodtreweek/js_testing.svg)
 
 # js_testing
-Testing Front End Javascript with Karma, Jasmine, and Travis CLI
+Testing Front-end Javascript with Karma, Jasmine, and Travis CLI.
+Node.js version is currently 10.1.0. 
 
-
-## Example test repo for javascript front-end development.
 
 ## Dependencies
 - Node
