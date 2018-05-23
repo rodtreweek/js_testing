@@ -1,4 +1,4 @@
-(function($,window,document,undefined) {    
+ (function($,window,document,undefined) {    
 
     if ($.fn) {
          // we can use library methods
@@ -8,31 +8,40 @@
     /*
      * requires jquery (currently)
      */
-    playingCards.prototype.spread = function(dest) {
-        if (!this.conf.el && !dest) {
-            return false;
-        }
-        var to = this.conf.el || dest,
-            l = this.cards.length,
-            i;
-        to.html('');
-        // clear (just a demo)
-        for (i = 0; i < l; i++) {
-            to.append(this.cards[i].getHTML());
-        }
-    };
+     playingCards.prototype.spread = function(dest, slowly) {
+         if (!this.conf.el && !dest) {
+             return false;
+         }
+         var to = this.conf.el || dest,
+             l = this.cards.length,
+             i;
+         to.html('');
+         // clear (just a demo)
+         if (slowly) {
+             var thisThis = this;
+             var i = 0;
+             var endinterval = setInterval(function() {
+                 to.append(thisThis.cards[i].getHTML());
+                 i++;
+                 if (i >= l) {
+                     clearInterval(endinterval);
+                 }
+             }, 130);
+         } else {
+             for (i = 0; i < l; i++) {
+                 to.append(this.cards[i].getHTML());
+             }
+         }
+     };
     /**
      * generate (and cache) html for the card
      * 
      * @return string The HTML block to show the card
      */
-    
-Prev | Next
     playingCards.card.prototype.getHTML = function() {
         if (this.html) {
             return this.html;
         }
-        
         this.suitCode = "&nbsp;";
         this.colorCls = '';
         switch (this.suit) {

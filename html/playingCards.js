@@ -48,12 +48,12 @@ if (Array.indexOf === undefined) {
                     this.cards[l] = new playingCards.card(r, o.ranks[r], s, o.suits[s]);
                 }
             }
-             // jokers
+            // jokers
             // for (j = 0; j < o.jokers; j++) {
-            //  l = this.cards.length;
-            //  // suit will always be 1 or 2
-            //   this.cards[l] = new playingCards.card("N", o.jokerText, (j % 2) + 1, '');
-            //}
+            //     l = this.cards.length;
+            //     // suit will always be 1 or 2
+            //     this.cards[l] = new playingCards.card("N", o.jokerText, (j % 2) + 1, '');
+            // }
         }
     };
     playingCards.prototype.draw = function() {
@@ -123,8 +123,8 @@ if (Array.indexOf === undefined) {
         "renderMode": 'css',
         "ofString": " of ",
         "startShuffled": true,
-        //"jokers": 2,
-        //"jokerText": "Joker",
+        // "jokers": 2,
+        // "jokerText": "Joker",
         "ranks": {
             "2": "Two",
             "3": "Three",
@@ -141,8 +141,8 @@ if (Array.indexOf === undefined) {
             "A": "Ace"
         },
         "suits": {
-            "D": "Diamonds",
             "C": "Clubs",
+            "D": "Diamonds",
             "H": "Hearts",
             "S": "Spades"
         }
