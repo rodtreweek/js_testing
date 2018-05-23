@@ -140,9 +140,9 @@ if (Array.indexOf === undefined) {
             "K": "King",
             "A": "Ace"
         },
-        "suits": {
-            "D": "Diamonds",
+        "suits": {            
             "C": "Clubs",
+            "D": "Diamonds",
             "H": "Hearts",
             "S": "Spades"
         }
