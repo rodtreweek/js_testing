@@ -1,6 +1,6 @@
-describe("The 'toBeDefined' matcher", function() {
+describe("The 'toEqual' matcher", function() {
 
-  it("Should be defined", function() {
-    expect(playingCards.compareRank(a, b)).toBeDefined();
+  it("The 'toMatch' matcher is for regular expressions", function() {
+    expect(playingCards.compareRank).toMatch(/^\d+$/);
     });
 });
