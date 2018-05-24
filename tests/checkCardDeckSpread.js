@@ -1,6 +1,7 @@
-describe("The 'toEqual' matcher", function() {
+describe("Show the deck", function() {
+  var cardDeck = $("#cardDeck").playingCards();
 
-  it("The 'toMatch' matcher is for regular expressions", function() {
-    expect(playingCards.compareRank).toMatch(/^\d+$/);
+  it("Should show the deck", function() {
+    expect(cardDeck.spread).toBeDefined();
     });
 });
