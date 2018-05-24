@@ -1,3 +1,8 @@
+// This software includes the playingCards.js Library: Copyright (C) 2010 Adam Eivy.
+// Dual licensed under the MIT and GPL licenses:
+// http://www.opensource.org/licenses/mit-license.php
+// http://www.gnu.org/licenses/gpl.html
+
 if (Array.indexOf === undefined) {
     /* Finds the index of the first occurence of item in the array, or -1 if not found */
     Array.prototype.indexOf = function(v) {

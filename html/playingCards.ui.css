@@ -1,3 +1,8 @@
+/* This software includes the playingCards.ui.css: Copyright (c) 2010 Adam Eivy */
+/*  Dual licensed under the MIT and GPL licenses: */
+/*  http://www.opensource.org/licenses/mit-license.php */
+/*  http://www.gnu.org/licenses/gpl.html */
+
 .playingCard { /* to show the back of the card, hide the front */
 position: relative;
 background-color:#036;
