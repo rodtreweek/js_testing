@@ -1,4 +1,11 @@
- (function($,window,document,undefined) {
+// This software includes the playingCards.ui.js Library: Copyright (C) 2010 Adam Eivy.
+// Dual licensed under the MIT and GPL licenses:
+// http://www.opensource.org/licenses/mit-license.ph
+// http://www.gnu.org/licenses/gpl.html
+// @requires playingCards.js
+// @requires playingCards.ui.css
+
+(function($,window,document,undefined) {
 
     if ($.fn) {
          // we can use library methods
