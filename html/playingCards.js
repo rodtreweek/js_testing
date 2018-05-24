@@ -1,8 +1,3 @@
-// This software includes the playingCards.js Library: Copyright (C) 2010 Adam Eivy.
-// Dual licensed under the MIT and GPL licenses:
-// http://www.opensource.org/licenses/mit-license.php
-// http://www.gnu.org/licenses/gpl.html
-
 if (Array.indexOf === undefined) {
     /* Finds the index of the first occurence of item in the array, or -1 if not found */
     Array.prototype.indexOf = function(v) {
@@ -33,7 +28,7 @@ if (Array.indexOf === undefined) {
         this.conf = c;
         this.init();
         if (this.conf.startShuffled) {
-            this.shuffle(5);
+            this.shuffle();
         }
         return this;
     };
@@ -82,20 +77,19 @@ if (Array.indexOf === undefined) {
      *
      * @param int n The number of times to shuffle (defaults to 5)
      */
-    playingCards.prototype.shuffle = function(n) {
+   // Changing to use Fisher-Yates shuffle algorithm and avoid the possibility of memory leaks:
+   playingCards.prototype.shuffle = function(n) {
         if (!n) {
             n = 5;
         }
-        var l = this.cards.length,
-            r,tmp,i,j;
-
         for (i = 0; i < n; i++) {
-            for (j = 0; j < l; j++) {
-                r = Math.floor(Math.random() * l);
+          for (j = this.cards.length - 1; j > 0; j--) {
+                r = Math.floor(Math.random() * (j + 1));
                 tmp = this.cards[j];
                 this.cards[j] = this.cards[r];
                 this.cards[r] = tmp;
             }
+          return this.cards;
         }
     };
 
