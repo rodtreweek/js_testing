@@ -6,7 +6,7 @@
 - Dual licensed under the MIT and GPL licenses:
 http://www.opensource.org/licenses/mit-license.php
 http://www.gnu.org/licenses/gpl.html
-- Node.js version used: 10.1.0  
+- Node.js version used: 10.1.0
 - All dependencies are referenced within package.json and package-lock.json.
 
 
