@@ -6,3 +6,41 @@ patch:
   'npm:uglify-js:20151024':
     - karma-jasmine-jquery > bower-installer > bower > handlebars > uglify-js:
         patched: '2019-12-20T01:02:21.068Z'
+    - karma-jasmine-jquery > bower-installer > bower > inquirer > bower-installer > bower > handlebars > uglify-js:
+        patched: '2019-12-20T01:52:20.540Z'
+  'npm:hawk:20160119':
+    - karma-jasmine-jquery > bower-installer > bower > inquirer > bower-installer > bower > request > hawk:
+        patched: '2019-12-20T01:52:20.540Z'
+    - karma-jasmine-jquery > bower-installer > bower > inquirer > bower-installer > bower > bower-registry-client > request > hawk:
+        patched: '2019-12-20T01:52:20.540Z'
+  'npm:http-signature:20150122':
+    - karma-jasmine-jquery > bower-installer > bower > inquirer > bower-installer > bower > request > http-signature:
+        patched: '2019-12-20T01:52:20.540Z'
+    - karma-jasmine-jquery > bower-installer > bower > inquirer > bower-installer > bower > bower-registry-client > request > http-signature:
+        patched: '2019-12-20T01:52:20.540Z'
+  'npm:mime:20170907':
+    - karma-jasmine-jquery > bower-installer > bower > inquirer > bower-installer > bower > request > form-data > mime:
+        patched: '2019-12-20T01:52:20.540Z'
+  'npm:minimatch:20160620':
+    - karma-jasmine-jquery > bower-installer > bower > inquirer > bower-installer > bower > glob > minimatch:
+        patched: '2019-12-20T01:52:20.540Z'
+    - karma-jasmine-jquery > bower-installer > bower > inquirer > bower-installer > glob > minimatch:
+        patched: '2019-12-20T01:52:20.540Z'
+  'npm:request:20160119':
+    - karma-jasmine-jquery > bower-installer > bower > inquirer > bower-installer > bower > bower-registry-client > request:
+        patched: '2019-12-20T01:52:20.540Z'
+    - karma-jasmine-jquery > bower-installer > bower > inquirer > bower-installer > bower > request:
+        patched: '2019-12-20T01:52:20.540Z'
+  'npm:semver:20150403':
+    - karma-jasmine-jquery > bower-installer > bower > inquirer > bower-installer > bower > semver:
+        patched: '2019-12-20T01:52:20.540Z'
+    - karma-jasmine-jquery > bower-installer > bower > inquirer > bower-installer > bower > update-notifier > semver-diff > semver:
+        patched: '2019-12-20T01:52:20.540Z'
+  'npm:shell-quote:20160621':
+    - karma-jasmine-jquery > bower-installer > bower > inquirer > bower-installer > bower > shell-quote:
+        patched: '2019-12-20T01:52:20.540Z'
+  'npm:tunnel-agent:20170305':
+    - karma-jasmine-jquery > bower-installer > bower > inquirer > bower-installer > bower > request > tunnel-agent:
+        patched: '2019-12-20T01:52:20.540Z'
+    - karma-jasmine-jquery > bower-installer > bower > inquirer > bower-installer > bower > bower-registry-client > request > tunnel-agent:
+        patched: '2019-12-20T01:52:20.540Z'
