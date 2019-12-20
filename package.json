@@ -31,9 +31,13 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "dependencies": {
-    "karma-jasmine-jquery": "^0.1.1"
-  }
+    "karma-jasmine-jquery": "^0.1.1",
+    "snyk": "^1.264.0"
+  },
+  "snyk": true
 }
